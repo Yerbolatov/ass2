@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Information Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Random User Information Hub</h1>
+            <p class="subtitle">Discover random users and explore their world</p>
+        </header>
+
+        <div class="action-section">
+            <button id="generateBtn" class="generate-btn">
+                <span class="btn-icon">🎲</span>
+                Generate Random User
+            </button>
+            <div id="loadingIndicator" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching data...</p>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <main id="mainContent" class="main-content hidden">
+            <!-- User Profile Section -->
+            <section class="section user-section">
+                <h2 class="section-title">
+                    <span class="icon">👤</span>
+                    User Profile
+                </h2>
+                <div class="user-card">
+                    <div class="user-image-container">
+                        <img id="profilePicture" src="" alt="User Profile" class="user-image">
+                    </div>
+                    <div class="user-details">
+                        <h3 id="userName" class="user-name"></h3>
+                        <div class="user-info-grid">
+                            <div class="info-item">
+                                <span class="label">Gender:</span>
+                                <span id="gender" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Age:</span>
+                                <span id="age" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Date of Birth:</span>
+                                <span id="dateOfBirth" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">City:</span>
+                                <span id="city" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Country:</span>
+                                <span id="country" class="value"></span>
+                            </div>
+                            <div class="info-item full-width">
+                                <span class="label">Address:</span>
+                                <span id="fullAddress" class="value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Country Information Section -->
+            <section class="section country-section">
+                <h2 class="section-title">
+                    <span class="icon">🌍</span>
+                    Country Information
+                </h2>
+                <div class="country-card">
+                    <div class="flag-container">
+                        <img id="countryFlag" src="" alt="Country Flag" class="country-flag">
+                    </div>
+                    <div class="country-details">
+                        <h3 id="countryName" class="country-name"></h3>
+                        <div class="country-info-grid">
+                            <div class="info-item">
+                                <span class="label">Capital:</span>
+                                <span id="capital" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Official Language(s):</span>
+                                <span id="languages" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Currency:</span>
+                                <span id="currency" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Region:</span>
+                                <span id="region" class="value"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Population:</span>
+                                <span id="population" class="value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exchange Rate Sub-section -->
+                <div class="exchange-rate-card">
+                    <h3 class="subsection-title">
+                        <span class="icon">💱</span>
+                        Exchange Rates
+                    </h3>
+                    <div id="exchangeRates" class="exchange-rates">
+                        <div class="rate-item">
+                            <span class="rate-label">To USD:</span>
+                            <span id="rateUSD" class="rate-value"></span>
+                        </div>
+                        <div class="rate-item">
+                            <span class="rate-label">To KZT:</span>
+                            <span id="rateKZT" class="rate-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Section -->
+            <section class="section news-section">
+                <h2 class="section-title">
+                    <span class="icon">📰</span>
+                    Latest News Headlines
+                </h2>
+                <div id="newsContainer" class="news-container">
+                    <!-- News articles will be dynamically inserted here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Random User Information Hub | Backend Assignment 2</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
